@@ -9,7 +9,6 @@ const TabStyle = styled.p `
   margin-left: 10px;
 `
 
-
 const Tabs = props => {
   return (
     <div className="tabs">
@@ -17,10 +16,15 @@ const Tabs = props => {
         <span className="title">TRENDING TOPICS:</span>
             {
               props.tabs.map((tab) => (
-                <TabStyle key={tab}>{tab}</TabStyle>
+                <TabStyle key={tab}>
+                  <Tab 
+                    topic={tab}
+                    selectTabHandler={props.selectTabHandler}
+                    selected={props.selected}
+                  />
+                </TabStyle>
               ))
             }
-
       </div>
     </div>
   );
