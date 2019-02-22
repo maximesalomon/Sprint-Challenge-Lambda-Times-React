@@ -20,7 +20,7 @@ const Tabs = props => {
                   <Tab 
                     topic={tab}
                     selectTabHandler={props.selectTabHandler}
-                    selected={props.selected}
+                    selectedTab={props.selectedTab}
                   />
                 </TabStyle>
               ))
